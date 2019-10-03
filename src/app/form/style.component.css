@@ -1,0 +1,14 @@
+.crud .container{
+    background-color: #fff;
+    margin-top: 10px;
+    border-radius: 5px;
+    height: 500px;
+}
+.crud button a{
+    text-decoration: none;
+    color: #fff;
+}
+.crud h1{
+    padding-top: 16px;
+    padding-bottom: 30px;
+}

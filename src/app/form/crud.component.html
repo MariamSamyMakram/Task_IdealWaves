@@ -1,0 +1,63 @@
+<div class="crud ">
+  <div class="container ">
+    <h1 class="mt-5"><a [routerLink] = "['/Users']" >Users</a></h1>
+    <div class="row">
+      <div class="col-lg-6">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+      </div>
+      <br><br>
+      <div class="col-lg-6">
+        <button type="button" class="btn btn-primary float-right"><a [routerLink] = "['/Create']">Create User</a></button>
+      </div>
+    </div>
+    <table class="table text-center">
+        <thead>
+          <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Age</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Birthday</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>@mdo</td>
+            <td>@mdo</td>
+            <td><a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+            <td><a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
+           </tr>
+           <tr>
+             <th scope="row">2</th>
+             <td>Jacob</td>
+             <td>Thornton</td>
+             <td>@fat</td>
+             <td>@mdo</td>
+             <td>@mdo</td>
+             <td><a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+             <td><a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+              <td>@mdo</td>
+              <td>@mdo</td>
+              <td><a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+              <td><a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+</div>
+<router-outlet></router-outlet>
