@@ -8,8 +8,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 const appRoutes: Routes = [
-  { path: 'Create', component: CreateComponent },
-  { path: 'Users' , component: CrudComponent },
+  { path: 'create', component: CreateComponent },
+  { path: 'users' , component: CrudComponent },
+  {path: '', component: CrudComponent},
 ];
 
 @NgModule({

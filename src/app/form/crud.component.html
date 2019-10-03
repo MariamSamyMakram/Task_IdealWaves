@@ -1,6 +1,6 @@
 <div class="crud ">
   <div class="container ">
-    <h1 class="mt-5"><a [routerLink] = "['/Users']" >Users</a></h1>
+    <h1 class="mt-5"><a [routerLink] = "['/users']" >Users</a></h1>
     <div class="row">
       <div class="col-lg-6">
           <div class="input-group mb-3">
@@ -9,7 +9,7 @@
       </div>
       <br><br>
       <div class="col-lg-6">
-        <button type="button" class="btn btn-primary float-right"><a [routerLink] = "['/Create']">Create User</a></button>
+        <button type="button" class="btn btn-primary float-right"><a [routerLink] = "['/create']">Create User</a></button>
       </div>
     </div>
     <table class="table text-center">
@@ -33,8 +33,8 @@
             <td>@mdo</td>
             <td>@mdo</td>
             <td>@mdo</td>
-            <td><a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
-            <td><a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
+            <td><a href="#" data-toggle="modal" data-target="#popEdit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+            <td><a href="#" data-toggle="modal" data-target="#popDelete"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
            </tr>
            <tr>
              <th scope="row">2</th>
@@ -43,8 +43,8 @@
              <td>@fat</td>
              <td>@mdo</td>
              <td>@mdo</td>
-             <td><a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
-             <td><a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
+             <td><a href="#" data-toggle="modal" data-target="#popEdit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+             <td><a href="#" data-toggle="modal" data-target="#popDelete"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
             </tr>
             <tr>
               <th scope="row">3</th>
@@ -53,11 +53,85 @@
               <td>@twitter</td>
               <td>@mdo</td>
               <td>@mdo</td>
-              <td><a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
-              <td><a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
+              <td><a href="#" data-toggle="modal" data-target="#popEdit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+              <td><a href="#" data-toggle="modal" data-target="#popDelete"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
             </tr>
         </tbody>
     </table>
   </div>
+
+  <!-- The Modal for delete user -->
+  <div class="modal" id="popDelete">
+      <div class="modal-dialog">
+        <div class="modal-content">
+    
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+    
+          <!-- Modal body -->
+          <div class="modal-body">
+            Are you delete this user ?
+          </div>
+    
+          <!--  Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+          </div>
+    
+        </div>
+      </div>
+  </div>
+
+  <!-- The Modal for edit -->
+  <div class="modal" id="popEdit">
+      <div class="modal-dialog">
+        <div class="modal-content">
+    
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+    
+          <!-- Modal body -->
+          <div class="modal-body">
+              <form>
+                  <div class="form-group">
+                      <label>First Name</label> 
+                      <input type="text" class="form-control" id="firstName"  placeholder="Enter Frist Name">
+                  </div>
+                  <div class="form-group">
+                      <label> Last Name</label>
+                      <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name">
+                  </div>
+                  <div class="form-group">
+                      <label> Email</label>
+                      <input type="email" class="form-control" id="email" placeholder="Enter Email">
+                  </div>
+                  <div class="form-group">
+                      <label>Age</label>
+                      <input type="number" class="form-control" id="age" placeholder="Enter Age">
+                  </div>
+                  <div class="form-group">
+                      <label > Phone</label>
+                      <input type="number" class="form-control" id="phone" placeholder="Enter Phone ">
+                  </div>
+                  <div class="form-group">
+                      <label>Birthday</label>
+                      <input type="date" class="form-control" id="birthday" >
+                  </div>
+                  <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Edit</button>
+              </form>
+          </div>
+        </div>
+      </div>
+  </div>
+
 </div>
 <router-outlet></router-outlet>
