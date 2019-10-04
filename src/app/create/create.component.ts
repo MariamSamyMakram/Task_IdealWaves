@@ -6,7 +6,10 @@ import { Component ,Input }  from '@angular/core';
     styleUrls:['app/create/create.component.css']
 })
 export class CreateComponent{
-    addUser(){
-    }
 
+    addUser(fname:string,lname:string,email:string,age:number,phone:number){
+
+    } 
+
+    
 }
